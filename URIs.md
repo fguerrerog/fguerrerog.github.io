@@ -1,12 +1,17 @@
+# Wordpress
+  WPScan  
+  [WPProbe](https://github.com/Chocapikk/wpprobe)  
+  
 # Extensiones de Firefox
   Hacktools  
-  Wappalyzer  
+  Wappalyze  
   Foxyproxy  
 
 # URI
 https://github.com/swisskyrepo/PayloadsAllTheThings  
 https://www.revshells.com/  
 https://github.com/BlackArch/webshells  
+
 
 \
 \
