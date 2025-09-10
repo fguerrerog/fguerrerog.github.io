@@ -1,0 +1,50 @@
+#WPProbe
+WPPROBE: ASÍ pueden ver si TU WORDPRESS ESTÁ EXPUESTO🔥🚀
+ 
+ 
+ 
+ WordPress es increíblemente popular. De hecho, gran parte de las webs que usamos cada día están construidas sobre él.
+ 
+ Pero esa popularidad tiene un precio: es también uno de los objetivos favoritos de los atacantes.
+ 
+ En mis pruebas de pentesting, me he topado más de una vez con entornos WordPress inseguros. Y ahí es donde entra en juego una herramienta que quiero compartir.
+ 
+ 🔎 ¿Qué es wpprobe?
+ Un escáner especializado en WordPress que permite detectar de manera rápida si un plugin vulnerable está instalado, qué versión usa y si tiene un CVE asociado.
+ 
+ 🚀 ¿Qué puedes hacer con WPProbe?
+ ▪️ Escanear y detectar plugins vulnerables.
+ ▪️Identificar CVE asociados y niveles de severidad.
+ ▪️Realizar fuerza bruta de plugins con listas personalizadas.
+ ▪️Reducir tiempo en la fase de enumeración y validación.
+ ▪️Confirmar de manera fiable si tu WordPress está en riesgo.
+ 
+ Para poner a prueba la herramienta trabajamos con la máquina Shenron (VulnHub), que simula un entorno corporativo real con WordPress expuesto.
+ 
+ Tras la fase inicial de enumeración y reconocimiento, encontramos indicios de rutas sospechosas en el servidor. El uso de wpprobe fue clave: me permitió confirmar la vulnerabilidad de forma precisa y automatizada, reduciendo el tiempo de validación y descartando falsos positivos.
+ 
+ 📌 Resultado del escaneo
+ 🔴 Plugin vulnerable: site-editor
+ 📌 Versión afectada: 1.1.1
+ 🧩 CVE: CVE-2018-7422
+ ⚠️ Severidad: Crítica (CVSS 9.8)
+ 🕳️ Tipo: LFI (Local File Inclusion)
+ 🔓 Requiere autenticación: ❌ (explotable sin credenciales)
+ En este escenario, el hallazgo fue determinante:
+ 👉 Lo interesante es que este fallo es muy realista: en un escenario real, un atacante externo podría leer archivos sensibles como /etc/passwd o incluso wp-config.php.
+ Esto significa un punto de entrada directo para comprometer toda la infraestructura detrás de WordPress.
+ 
+ ⚠️ Disclaimer: 
+ Esta investigación se ha realizado en entornos controlados (máquina vulnerable de VulnHub). No intentes aplicarlo sobre sistemas que no te pertenezcan o no tengas autorización expresa.
+ 
+ 🔗 Repositorio oficial de la herramienta:
+ 👉 https://lnkd.in/dBNJitGC
+ 
+ 📣 Ahora me encantaría leerte:
+ ¿Ya conocías wpprobe?
+ ¿La incluirías en tu arsenal de auditoría/pentesting?
+ 
+ Déjame un comentario con tu opinión y comparte este post si crees que puede ser útil para alguien de tu red.
+ ✖️ Twitter/X: @D4nYeD
+ 💻 GitHub: github.com/D4NYED
+
