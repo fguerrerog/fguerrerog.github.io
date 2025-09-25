@@ -20,7 +20,7 @@
       Francisco Guerrero Gabriel
     </a>-->
 
-    <!-- LinkedIn Badge Script & Fallback -->
+<!-- LinkedIn Badge Script & Fallback -->
 <div id="linkedin-badge-container">
   <div class="badge-base LI-profile-badge" 
        data-locale="es_ES" 
@@ -35,7 +35,6 @@
     </a>
   </div>
 </div>
-
 <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 <script>
   // Espera 3 segundos para que el script cargue
@@ -46,11 +45,12 @@
     if (badgeDiv && badgeDiv.innerHTML.includes('LI-simple-link')) {
       // Reemplaza por imagen
       badgeDiv.innerHTML = '<a href="https://es.linkedin.com/in/francisco-guerrero-gabriel?trk=profile-badge" target="_blank">' +
-        '<img src="badges/linkedin-badge_20250925.png" alt="LinkedIn Badge" style="height:80px;">' +
+        '<img src="badges/linkedin-badge_20250925.png" alt="LinkedIn Badge" style="height:300px;">' +
         '</a>';
     }
   }, 3000); // 3 segundos
 </script>
   </div>              
+<!-- /LinkedIn Badge Script & Fallback -->
 </body>
 </html>
