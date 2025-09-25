@@ -7,7 +7,7 @@
 <body>
   <h1>Hola mundo</h1>
   <p>I'm hosted with GitHub Pages</p>
-  <!--Linkedin badge-->
+  <!--Linkedin badge
   <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
   <div class="badge-base LI-profile-badge" 
        data-locale="es_ES" 
@@ -18,7 +18,39 @@
        data-version="v1">
     <a class="badge-base__link LI-simple-link" href="https://es.linkedin.com/in/francisco-guerrero-gabriel?trk=profile-badge">
       Francisco Guerrero Gabriel
+    </a>-->
+
+    <!-- LinkedIn Badge Script & Fallback -->
+<div id="linkedin-badge-container">
+  <div class="badge-base LI-profile-badge" 
+       data-locale="es_ES" 
+       data-size="large" 
+       data-theme="light" 
+       data-type="HORIZONTAL" 
+       data-vanity="francisco-guerrero-gabriel" 
+       data-version="v1">
+    <a class="badge-base__link LI-simple-link" 
+       href="https://es.linkedin.com/in/francisco-guerrero-gabriel?trk=profile-badge">
+      Francisco Guerrero Gabriel
     </a>
+  </div>
+</div>
+
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+<script>
+  // Espera 3 segundos para que el script cargue
+  setTimeout(function(){
+    // Si el script no generó la insignia, el div sigue igual (solo con el enlace)
+    var badgeDiv = document.querySelector('.badge-base.LI-profile-badge');
+    // Verifica si el contenido sigue solo como enlace
+    if (badgeDiv && badgeDiv.innerHTML.includes('LI-simple-link')) {
+      // Reemplaza por imagen
+      badgeDiv.innerHTML = '<a href="https://es.linkedin.com/in/francisco-guerrero-gabriel?trk=profile-badge" target="_blank">' +
+        '<img src="badges/linkedin-badge_20250925.png" alt="LinkedIn Badge" style="height:80px;">' +
+        '</a>';
+    }
+  }, 3000); // 3 segundos
+</script>
   </div>              
 </body>
 </html>
